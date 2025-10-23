@@ -8,7 +8,8 @@
     "certifications": ["CSCS", "USAW Level 2", "Precision Nutrition L1"],
     "phone": "+1 (555) 123-4501",
     "email": "marcus@gympoint.com",
-    "image": "/Kal (1).PNG",
+  "image": "/Kal (1).PNG",
+  "backgroundImage": "/kal-2.PNG",
     "instagram": "@marcussteel",
     "availability": "Mon-Fri 6AM-2PM"
   },
@@ -21,7 +22,8 @@
     "certifications": ["CrossFit L2", "FMS", "NASM-CPT"],
     "phone": "+1 (555) 123-4502",
     "email": "sarah@gympoint.com",
-    "image": "/KOKA.PNG",
+  "image": "/KOKA.PNG",
+  "backgroundImage": "/trainer-bg2.jpg",
     "instagram": "@sarahchen_fit",
     "availability": "Mon-Wed-Fri 2PM-8PM"
   },
@@ -34,7 +36,8 @@
     "certifications": ["USA Boxing Coach", "ACE-CPT", "TRX Certified"],
     "phone": "+1 (555) 123-4503",
     "email": "david@gympoint.com",
-    "image": "/Miko.jpg",
+  "image": "/Miko.jpg",
+  "backgroundImage": "/trainer-bg3.jpg",
     "instagram": "@coach_drod",
     "availability": "Tue-Thu-Sat 10AM-6PM"
   },
@@ -47,7 +50,8 @@
     "certifications": ["RD", "NASM-CPT", "Precision Nutrition L2"],
     "phone": "+1 (555) 123-4504",
     "email": "emily@gympoint.com",
-    "image": "PLACEHOLDER_TRAINER_IMAGE_4",
+  "image": "PLACEHOLDER_TRAINER_IMAGE_4",
+  "backgroundImage": "/trainer-bg4.jpg",
     "instagram": "@emilywellness",
     "availability": "Mon-Thu 9AM-5PM"
   },
@@ -60,7 +64,8 @@
     "certifications": ["RYT-500", "NASM-CES", "FRCms"],
     "phone": "+1 (555) 123-4505",
     "email": "james@gympoint.com",
-    "image": "PLACEHOLDER_TRAINER_IMAGE_5",
+  "image": "PLACEHOLDER_TRAINER_IMAGE_5",
+  "backgroundImage": "/trainer-bg5.jpg",
     "instagram": "@jamespark_yoga",
     "availability": "Tue-Wed-Thu 6AM-12PM"
   }

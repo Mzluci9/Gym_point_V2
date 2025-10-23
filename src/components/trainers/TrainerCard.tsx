@@ -17,6 +17,7 @@ interface Trainer {
   phone: string;
   email: string;
   image: string;
+  backgroundImage?: string;
   instagram: string;
   availability: string;
 }
@@ -32,8 +33,15 @@ const TrainerCard = ({ trainer, onClick }: TrainerCardProps) => {
       onClick={onClick}
       className="group cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-primary overflow-hidden"
     >
-      {/* Trainer image or initials */}
-      <div className="relative h-64 bg-gradient-to-br from-primary/20 to-secondary/80 flex items-center justify-center overflow-hidden">
+      {/* Trainer image or initials with background image */}
+      <div
+        className="relative h-64 flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: trainer.backgroundImage ? `url(${trainer.backgroundImage})` : 'linear-gradient(to bottom right, var(--tw-gradient-stops))',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="text-center p-6 z-10">
           {trainer.image && trainer.image !== '' && trainer.image !== undefined && trainer.image !== null && !trainer.image.startsWith('PLACEHOLDER_TRAINER_IMAGE') ? (
             <img
