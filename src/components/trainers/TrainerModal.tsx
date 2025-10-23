@@ -26,13 +26,20 @@ const TrainerModal = ({ trainer, open, onClose }: TrainerModalProps) => {
         </DialogHeader>
 
         <div className="space-y-6">
-          {/* Placeholder Image */}
+          {/* Trainer Image or Initials */}
           <div className="relative h-64 bg-gradient-to-br from-primary/20 to-secondary/80 rounded-lg flex items-center justify-center">
             <div className="text-center p-6">
-              <div className="w-32 h-32 mx-auto bg-primary/30 rounded-full flex items-center justify-center mb-4 text-4xl font-bold text-white">
-                {trainer.name.split(' ').map(n => n[0]).join('')}
-              </div>
-              <p className="text-white text-sm">{trainer.image}</p>
+              {trainer.image && trainer.image !== '' && trainer.image !== undefined && trainer.image !== null && !trainer.image.startsWith('PLACEHOLDER_TRAINER_IMAGE') ? (
+                <img
+                  src={trainer.image}
+                  alt={trainer.name}
+                  className="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-white shadow-lg"
+                />
+              ) : (
+                <div className="w-32 h-32 mx-auto bg-primary/30 rounded-full flex items-center justify-center mb-4 text-4xl font-bold text-white">
+                  {trainer.name.split(' ').map(n => n[0]).join('')}
+                </div>
+              )}
             </div>
           </div>
 

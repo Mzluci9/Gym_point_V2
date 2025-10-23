@@ -32,13 +32,20 @@ const TrainerCard = ({ trainer, onClick }: TrainerCardProps) => {
       onClick={onClick}
       className="group cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-primary overflow-hidden"
     >
-      {/* Placeholder image area */}
+      {/* Trainer image or initials */}
       <div className="relative h-64 bg-gradient-to-br from-primary/20 to-secondary/80 flex items-center justify-center overflow-hidden">
         <div className="text-center p-6 z-10">
-          <div className="w-32 h-32 mx-auto bg-primary/30 rounded-full flex items-center justify-center mb-4 text-4xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-            {trainer.name.split(' ').map(n => n[0]).join('')}
-          </div>
-          <p className="text-white text-sm drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{trainer.image}</p>
+          {trainer.image && trainer.image !== '' && trainer.image !== undefined && trainer.image !== null && !trainer.image.startsWith('PLACEHOLDER_TRAINER_IMAGE') ? (
+            <img
+              src={trainer.image}
+              alt={trainer.name}
+              className="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-white shadow-lg"
+            />
+          ) : (
+            <div className="w-32 h-32 mx-auto bg-primary/30 rounded-full flex items-center justify-center mb-4 text-4xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              {trainer.name.split(' ').map(n => n[0]).join('')}
+            </div>
+          )}
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
       </div>
