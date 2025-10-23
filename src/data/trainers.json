@@ -1,0 +1,67 @@
+[
+  {
+    "id": "trainer-1",
+    "name": "Marcus Steel",
+    "title": "Head Strength Coach",
+    "bio": "With over 15 years of experience in strength and conditioning, Marcus has trained Olympic athletes and everyday warriors alike. His philosophy combines old-school discipline with cutting-edge sports science.",
+    "specialties": ["Strength Training", "Powerlifting", "Athletic Performance"],
+    "certifications": ["CSCS", "USAW Level 2", "Precision Nutrition L1"],
+    "phone": "+1 (555) 123-4501",
+    "email": "marcus@gympoint.com",
+    "image": "PLACEHOLDER_TRAINER_IMAGE_1",
+    "instagram": "@marcussteel",
+    "availability": "Mon-Fri 6AM-2PM"
+  },
+  {
+    "id": "trainer-2",
+    "name": "Sarah Chen",
+    "title": "Functional Training Specialist",
+    "bio": "Sarah brings a holistic approach to fitness, blending functional movements with mobility work. Former collegiate gymnast turned movement coach, she helps clients move better and feel stronger in daily life.",
+    "specialties": ["Functional Training", "Mobility", "CrossFit", "Gymnastics"],
+    "certifications": ["CrossFit L2", "FMS", "NASM-CPT"],
+    "phone": "+1 (555) 123-4502",
+    "email": "sarah@gympoint.com",
+    "image": "PLACEHOLDER_TRAINER_IMAGE_2",
+    "instagram": "@sarahchen_fit",
+    "availability": "Mon-Wed-Fri 2PM-8PM"
+  },
+  {
+    "id": "trainer-3",
+    "name": "David Rodriguez",
+    "title": "Boxing & HIIT Coach",
+    "bio": "Ex-professional boxer with a passion for high-intensity training. David's classes push limits while building mental toughness. Expect sweat, expect results.",
+    "specialties": ["Boxing", "HIIT", "Conditioning", "Weight Loss"],
+    "certifications": ["USA Boxing Coach", "ACE-CPT", "TRX Certified"],
+    "phone": "+1 (555) 123-4503",
+    "email": "david@gympoint.com",
+    "image": "PLACEHOLDER_TRAINER_IMAGE_3",
+    "instagram": "@coach_drod",
+    "availability": "Tue-Thu-Sat 10AM-6PM"
+  },
+  {
+    "id": "trainer-4",
+    "name": "Emily Watson",
+    "title": "Wellness & Nutrition Coach",
+    "bio": "Emily combines fitness coaching with nutritional expertise to help clients achieve lasting transformations. Her evidence-based approach focuses on sustainable habits and mindful eating.",
+    "specialties": ["Nutrition Coaching", "Weight Management", "Lifestyle Coaching"],
+    "certifications": ["RD", "NASM-CPT", "Precision Nutrition L2"],
+    "phone": "+1 (555) 123-4504",
+    "email": "emily@gympoint.com",
+    "image": "PLACEHOLDER_TRAINER_IMAGE_4",
+    "instagram": "@emilywellness",
+    "availability": "Mon-Thu 9AM-5PM"
+  },
+  {
+    "id": "trainer-5",
+    "name": "James Park",
+    "title": "Yoga & Recovery Specialist",
+    "bio": "James helps athletes and busy professionals recover smarter through yoga, stretching, and breathwork. His classes balance intensity with restoration.",
+    "specialties": ["Yoga", "Mobility", "Recovery", "Breathwork"],
+    "certifications": ["RYT-500", "NASM-CES", "FRCms"],
+    "phone": "+1 (555) 123-4505",
+    "email": "james@gympoint.com",
+    "image": "PLACEHOLDER_TRAINER_IMAGE_5",
+    "instagram": "@jamespark_yoga",
+    "availability": "Tue-Wed-Thu 6AM-12PM"
+  }
+]

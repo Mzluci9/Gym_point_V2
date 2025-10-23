@@ -1,0 +1,62 @@
+[
+  {
+    "id": "class-1",
+    "name": "Strength Foundations",
+    "instructor": "Marcus Steel",
+    "duration": "60 min",
+    "description": "Build a solid base with compound lifts and progressive overload",
+    "schedule": ["Monday 6:00 AM", "Wednesday 6:00 AM", "Friday 6:00 AM"],
+    "level": "Beginner to Intermediate",
+    "maxParticipants": 12
+  },
+  {
+    "id": "class-2",
+    "name": "Fight Club HIIT",
+    "instructor": "David Rodriguez",
+    "duration": "45 min",
+    "description": "Boxing-inspired high-intensity intervals that torch calories",
+    "schedule": ["Tuesday 6:30 PM", "Thursday 6:30 PM", "Saturday 10:00 AM"],
+    "level": "All Levels",
+    "maxParticipants": 20
+  },
+  {
+    "id": "class-3",
+    "name": "Functional Flow",
+    "instructor": "Sarah Chen",
+    "duration": "60 min",
+    "description": "Dynamic movements that improve everyday athleticism",
+    "schedule": ["Monday 5:00 PM", "Wednesday 5:00 PM", "Friday 12:00 PM"],
+    "level": "All Levels",
+    "maxParticipants": 15
+  },
+  {
+    "id": "class-4",
+    "name": "Power Yoga",
+    "instructor": "James Park",
+    "duration": "75 min",
+    "description": "Challenging flows that build strength and flexibility",
+    "schedule": ["Tuesday 7:00 AM", "Thursday 7:00 AM", "Sunday 9:00 AM"],
+    "level": "Intermediate",
+    "maxParticipants": 25
+  },
+  {
+    "id": "class-5",
+    "name": "Olympic Lifting",
+    "instructor": "Marcus Steel",
+    "duration": "90 min",
+    "description": "Master the snatch and clean & jerk with expert coaching",
+    "schedule": ["Tuesday 10:00 AM", "Thursday 10:00 AM"],
+    "level": "Advanced",
+    "maxParticipants": 8
+  },
+  {
+    "id": "class-6",
+    "name": "Recovery & Mobility",
+    "instructor": "James Park",
+    "duration": "45 min",
+    "description": "Active recovery focusing on flexibility and tissue quality",
+    "schedule": ["Monday 8:00 PM", "Friday 8:00 PM"],
+    "level": "All Levels",
+    "maxParticipants": 20
+  }
+]

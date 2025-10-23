@@ -1,0 +1,67 @@
+[
+  {
+    "id": "monthly",
+    "name": "Monthly Membership",
+    "price": "$89",
+    "period": "per month",
+    "description": "Perfect for getting started",
+    "features": [
+      "Unlimited gym access",
+      "All group classes included",
+      "Free fitness assessment",
+      "Locker & shower access",
+      "Member-only events",
+      "No long-term commitment"
+    ],
+    "popular": false
+  },
+  {
+    "id": "quarterly",
+    "name": "Quarterly Plan",
+    "price": "$249",
+    "period": "3 months ($83/mo)",
+    "description": "Best value for committed athletes",
+    "features": [
+      "All Monthly benefits",
+      "2 personal training sessions",
+      "Nutrition consultation",
+      "Priority class booking",
+      "Guest passes (2/month)",
+      "Free branded gear"
+    ],
+    "popular": true
+  },
+  {
+    "id": "annual",
+    "name": "Annual Elite",
+    "price": "$899",
+    "period": "12 months ($75/mo)",
+    "description": "Ultimate transformation package",
+    "features": [
+      "All Quarterly benefits",
+      "8 personal training sessions",
+      "Monthly body composition scan",
+      "Premium locker rental",
+      "Unlimited guest passes",
+      "VIP community access",
+      "Free merchandise bundle"
+    ],
+    "popular": false
+  },
+  {
+    "id": "pt-pack",
+    "name": "PT Pack",
+    "price": "$450",
+    "period": "10 sessions",
+    "description": "For those who want 1-on-1 coaching",
+    "features": [
+      "10 one-hour PT sessions",
+      "Customized training program",
+      "Nutrition guidance",
+      "Progress tracking & assessments",
+      "Valid for 3 months",
+      "Can be combined with any membership"
+    ],
+    "popular": false
+  }
+]
