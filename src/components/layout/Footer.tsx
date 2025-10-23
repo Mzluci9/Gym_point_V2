@@ -76,7 +76,7 @@ const Footer = () => {
           {/* Newsletter */}
           <div>
             <h4 className="text-lg font-bold text-primary mb-4">Stay Updated</h4>
-            <p className="text-muted-foreground mb-4">Get fitness tips, class updates, and exclusive offers.</p>
+            <p className="text-muted-foreground mb-4">Get fitness tips, class updates and exclusive offers.</p>
             <form onSubmit={handleNewsletterSubmit} className="flex flex-col gap-2">
               <Input
                 type="email"

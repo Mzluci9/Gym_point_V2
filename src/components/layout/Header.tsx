@@ -41,7 +41,7 @@ const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-primary-foreground hover:text-primary transition-colors font-medium"
+                className="text-yellow-400 hover:text-yellow-500 transition-colors font-medium"
               >
                 {item.label}
               </a>
@@ -69,7 +69,7 @@ const Header = () => {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 text-primary-foreground hover:text-primary transition-colors font-medium"
+                className="block py-3 text-yellow-400 hover:text-yellow-500 transition-colors font-medium"
               >
                 {item.label}
               </a>
