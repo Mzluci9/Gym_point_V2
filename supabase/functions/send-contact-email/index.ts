@@ -1,3 +1,6 @@
+// This file runs on the Deno runtime (Supabase Edge Functions).
+// Disable TypeScript checking here because the project's TS config doesn't include Deno/URL imports.
+// @ts-nocheck
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
 
@@ -29,14 +32,13 @@ const handler = async (req: Request): Promise<Response> => {
     // PLACEHOLDER: Replace with your gym's email
     const gymEmail = "your-gym-email@example.com";
     
-    // Import Resend from esm.sh
-    const { Resend } = await import("https://esm.sh/resend@4.0.0");
-    const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+    // Send email via Resend REST API (avoid importing esm.sh)
+    const apiKey = Deno.env.get("RESEND_API_KEY") ?? "";
 
-    const emailResponse = await resend.emails.send({
+    const payload = {
       from: "Gym Point <onboarding@resend.dev>",
       to: [gymEmail],
-      replyTo: email,
+      reply_to: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h1>New Contact Form Submission</h1>
@@ -47,7 +49,23 @@ const handler = async (req: Request): Promise<Response> => {
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
       `,
+    };
+
+    const resp = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify(payload),
     });
+
+    if (!resp.ok) {
+      const errText = await resp.text();
+      throw new Error(`Resend API error: ${resp.status} ${errText}`);
+    }
+
+    const emailResponse = await resp.json();
 
     console.log("Email sent successfully:", emailResponse);
 

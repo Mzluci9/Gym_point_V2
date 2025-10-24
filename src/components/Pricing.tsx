@@ -56,6 +56,7 @@ const Pricing = () => {
                 </ul>
 
                 <Button
+                  asChild
                   className={`w-full ${
                     plan.popular
                       ? "bg-primary text-secondary hover:bg-primary/90"
@@ -63,7 +64,7 @@ const Pricing = () => {
                   }`}
                   size="lg"
                 >
-                  Get Started
+                  <a href="#contact">Get Started</a>
                 </Button>
               </CardContent>
             </Card>
