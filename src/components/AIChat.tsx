@@ -29,29 +29,33 @@ const AIChat = () => {
     if (!input.trim()) return;
 
     const userMessage: Message = { role: "user", content: input };
-    setMessages((prev) => [...prev, userMessage]);
+    // Optimistically update UI with the user's message
+    const localMessages = [...messages, userMessage];
+    setMessages(localMessages);
     setInput("");
     setIsLoading(true);
 
-    // PLACEHOLDER: Replace with actual API call to /api/ai-assistant
-    // TODO: Set OPENAI_API_KEY environment variable
-    // Example:
-    // const response = await fetch('/api/ai-assistant', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ message: input })
-    // });
-    // const data = await response.json();
+    try {
+      // Call Supabase Edge Function 'ai-assistant' with full conversation history
+      const supabaseClient = (await import("@/integrations/supabase/client")).supabase;
+      const { data, error } = await supabaseClient.functions.invoke("ai-assistant", {
+        body: JSON.stringify({ messages: localMessages }),
+      });
 
-    // Mock response for now
-    setTimeout(() => {
-      const botMessage: Message = {
-        role: "assistant",
-        content: "Thanks for your question! The AI assistant is currently being set up. Please contact us directly for immediate assistance.",
-      };
+      if (error) throw error;
+
+      const json = typeof data === "string" ? JSON.parse(data) : data;
+      const reply = json?.reply ?? "Sorry, I couldn't get a response right now.";
+
+      const botMessage: Message = { role: "assistant", content: reply };
       setMessages((prev) => [...prev, botMessage]);
+    } catch (err) {
+      console.error("AI assistant error", err);
+      const botMessage: Message = { role: "assistant", content: "Sorry, the assistant is unavailable right now." };
+      setMessages((prev) => [...prev, botMessage]);
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   return (
