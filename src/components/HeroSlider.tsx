@@ -91,18 +91,11 @@ const HeroSlider = () => {
             {slides[currentSlide].subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              size="lg"
-              className="bg-primary text-secondary hover:bg-primary/90 text-lg px-8 py-6"
-            >
-              Start Your Journey
+            <Button asChild size="lg" className="bg-primary text-secondary hover:bg-primary/90 text-lg px-8 py-6">
+              <a href="#contact">Start Your Journey</a>
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-black text-black hover:bg-white hover:text-secondary text-lg px-8 py-6"
-            >
-              Book Free Trial
+            <Button asChild size="lg" className="border-2 border-black text-black hover:bg-primary/90 hover:text-secondary text-lg px-8 py-6">
+              <a href="#contact">Book Free Trial</a>
             </Button>
           </div>
         </div>
