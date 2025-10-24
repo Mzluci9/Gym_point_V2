@@ -2,7 +2,7 @@
   {
     "id": "monthly",
     "name": "Monthly Membership",
-    "price": "$89",
+    "price": "$2400",
     "period": "per month",
     "description": "Perfect for getting started",
     "features": [
@@ -18,8 +18,8 @@
   {
     "id": "quarterly",
     "name": "Quarterly Plan",
-    "price": "$249",
-    "period": "3 months ($83/mo)",
+    "price": "$6000",
+    "period": "3 months ($2000/mo)",
     "description": "Best value for committed athletes",
     "features": [
       "All Monthly benefits",
@@ -32,10 +32,10 @@
     "popular": true
   },
   {
-    "id": "annual",
-    "name": "Annual Elite",
-    "price": "$899",
-    "period": "12 months ($75/mo)",
+    "id": "6-month Plan ",
+    "name": "6-month Plan",
+    "price": "$11,000",
+    "period": "6 months ($1,833/mo)",
     "description": "Ultimate transformation package",
     "features": [
       "All Quarterly benefits",
@@ -49,9 +49,25 @@
     "popular": false
   },
   {
+    "id": "Anual Membership",
+    "name": "Anual Membership",
+    "price": "$19,000",
+    "period": "12 Months ($1,583/mo)",
+    "description": "For those who want 1-on-1 coaching",
+    "features": [
+      "10 one-hour PT sessions",
+      "Customized training program",
+      "Nutrition guidance",
+      "Progress tracking & assessments",
+      "Valid for 3 months",
+      "Can be combined with any membership"
+    ],
+    "popular": false
+  },
+  {
     "id": "pt-pack",
     "name": "PT Pack",
-    "price": "$450",
+    "price": "Max 3000$",
     "period": "10 sessions",
     "description": "For those who want 1-on-1 coaching",
     "features": [
