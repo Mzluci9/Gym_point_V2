@@ -100,7 +100,7 @@ const HeroSlider = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-secondary text-lg px-8 py-6"
+              className="border-2 border-black text-black hover:bg-white hover:text-secondary text-lg px-8 py-6"
             >
               Book Free Trial
             </Button>
