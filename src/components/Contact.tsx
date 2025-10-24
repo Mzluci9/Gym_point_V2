@@ -70,17 +70,17 @@ const Contact = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <Label htmlFor="name">Full Name</Label>
-              <Input id="name" name="name" required placeholder="John Doe" />
+              <Input id="name" name="name" required placeholder="Michael Zewdu" />
             </div>
             <div>
               <Label htmlFor="phone">Phone Number</Label>
-              <Input id="phone" name="phone" type="tel" required placeholder="+1 (555) 123-4567" />
+              <Input id="phone" name="phone" type="tel" required placeholder="+251 932519982" />
             </div>
           </div>
 
           <div>
             <Label htmlFor="email">Email Address</Label>
-            <Input id="email" name="email" type="email" required placeholder="john@example.com" />
+            <Input id="email" name="email" type="email" required placeholder="gympoint@example.com" />
           </div>
 
           <div>
