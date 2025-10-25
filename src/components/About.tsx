@@ -8,9 +8,9 @@ import { Award, Target, Users } from "lucide-react";
 const About = () => {
   // PLACEHOLDER: Modify about content here
   const stats = [
-    { icon: Users, label: "Active Members", value: "2,500+" },
-    { icon: Award, label: "Certified Trainers", value: "25+" },
-    { icon: Target, label: "Success Stories", value: "10,000+" },
+    { icon: Users, label: "Active Members", value: "2,000+" },
+    { icon: Award, label: "Certified Trainers", value: "10+" },
+    { icon: Target, label: "Success Stories", value: "5000+" },
   ];
 
   return (
