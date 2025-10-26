@@ -8,6 +8,7 @@ import { MessageCircle, X, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
+import { supabase } from "@/integrations/supabase/client";
 
 interface Message {
   role: "user" | "assistant";
@@ -37,21 +38,41 @@ const AIChat = () => {
 
     try {
       // Call Supabase Edge Function 'ai-assistant' with full conversation history
-      const supabaseClient = (await import("@/integrations/supabase/client")).supabase;
-      const { data, error } = await supabaseClient.functions.invoke("ai-assistant", {
+      const { data, error } = await supabase.functions.invoke("ai-assistant", {
         body: JSON.stringify({ messages: localMessages }),
       });
 
-      if (error) throw error;
+      if (error) {
+        console.error("Supabase functions.invoke error", error);
+        const botMessage: Message = { role: "assistant", content: "Sorry, the assistant is unavailable right now." };
+        setMessages((prev) => [...prev, botMessage]);
+        return;
+      }
 
-      const json = typeof data === "string" ? JSON.parse(data) : data;
-      const reply = json?.reply ?? "Sorry, I couldn't get a response right now.";
+      // `data` can be a string or already-parsed object depending on client version
+      let json: any = data;
+      if (typeof data === "string") {
+        try {
+          json = JSON.parse(data);
+        } catch (parseErr) {
+          console.warn("Could not parse function response as JSON", parseErr, data);
+          json = { reply: String(data) };
+        }
+      }
 
-      const botMessage: Message = { role: "assistant", content: reply };
-      setMessages((prev) => [...prev, botMessage]);
-    } catch (err) {
+      if (json?.error) {
+        console.error("AI function returned error", json.error);
+        const botMessage: Message = { role: "assistant", content: `Assistant error: ${String(json.error)}` };
+        setMessages((prev) => [...prev, botMessage]);
+      } else {
+        const reply = json?.reply ?? "Sorry, I couldn't get a response right now.";
+        const botMessage: Message = { role: "assistant", content: reply };
+        setMessages((prev) => [...prev, botMessage]);
+      }
+    } catch (err: any) {
       console.error("AI assistant error", err);
-      const botMessage: Message = { role: "assistant", content: "Sorry, the assistant is unavailable right now." };
+      const message = err?.message ? `Assistant error: ${err.message}` : "Sorry, the assistant is unavailable right now.";
+      const botMessage: Message = { role: "assistant", content: message };
       setMessages((prev) => [...prev, botMessage]);
     } finally {
       setIsLoading(false);
@@ -123,9 +144,16 @@ const AIChat = () => {
             <Input
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleSend()}
+              onKeyDown={(e) => {
+                // Send on Enter, but allow Shift+Enter for new lines
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  handleSend();
+                }
+              }}
               placeholder="Ask anything..."
               disabled={isLoading}
+              aria-label="AI chat input"
             />
             <Button
               onClick={handleSend}
