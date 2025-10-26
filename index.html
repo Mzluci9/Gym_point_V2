@@ -21,14 +21,9 @@
       RECOMMENDED: put your hero image in public/ as "hero-opengraph.png"
       (so it is served at https://gympointv2.vercel.app/hero-opengraph.png)
     -->
-    <!-- Use the actual deployed absolute URL and a cache-busting query so social scrapers pick up the new image.
-      Note: the file in `public/` currently is named `hero-opengraph.png.png` — renaming it to
-      `hero-opengraph.png` is recommended, but the absolute URL below matches the current file name. -->
-    <meta property="og:image" content="https://gympointv2.vercel.app/hero-opengraph.png.png?v=20251026" />
-    <meta property="og:image:secure_url" content="https://gympointv2.vercel.app/hero-opengraph.png.png?v=20251026" />
-    <meta property="og:image:alt" content="Gym Point hero image" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <!-- Removed og:image/twitter:image tags to prevent social platforms from showing any image
+      when this site is shared. This forces scrapers to show only title/description.
+      If you want to add an image later, add the absolute URL here and redeploy. -->
 
     <!-- If you insist on keeping the original file name with spaces, use this encoded URL instead:
     <meta property="og:image" content="https://gympointv2.vercel.app/Screenshot%202025-10-24%20173742.png" />
@@ -36,12 +31,12 @@
     -->
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
+  <!-- Keep a minimal twitter card so no large image is forced -->
+  <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@gympoint" />
     <meta name="twitter:title" content="Gym Point - Transform Your Body, Elevate Your Life" />
     <meta name="twitter:description" content="Premium fitness training with expert coaches and world-class facilities." />
-  <meta name="twitter:image" content="https://gympointv2.vercel.app/hero-opengraph.png.png?v=20251026" />
-    <meta name="twitter:image:alt" content="Gym Point hero image" />
+    <!-- No twitter:image meta -> no preview image will be used by Twitter/Telegram -->
 
     <!-- Favicon (optional) -->
   <link rel="icon" type="image/x-icon" href="https://gympointv2.vercel.app/favicon.ico?v=20251026" />
