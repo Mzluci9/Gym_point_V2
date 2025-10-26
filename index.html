@@ -21,8 +21,11 @@
       RECOMMENDED: put your hero image in public/ as "hero-opengraph.png"
       (so it is served at https://gympointv2.vercel.app/hero-opengraph.png)
     -->
-    <meta property="og:image" content="https://gympointv2.vercel.app/hero-opengraph.png" />
-    <meta property="og:image:secure_url" content="https://gympointv2.vercel.app/hero-opengraph.png" />
+    <!-- Use the actual deployed absolute URL and a cache-busting query so social scrapers pick up the new image.
+      Note: the file in `public/` currently is named `hero-opengraph.png.png` — renaming it to
+      `hero-opengraph.png` is recommended, but the absolute URL below matches the current file name. -->
+    <meta property="og:image" content="https://gympointv2.vercel.app/hero-opengraph.png.png?v=20251026" />
+    <meta property="og:image:secure_url" content="https://gympointv2.vercel.app/hero-opengraph.png.png?v=20251026" />
     <meta property="og:image:alt" content="Gym Point hero image" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -37,11 +40,11 @@
     <meta name="twitter:site" content="@gympoint" />
     <meta name="twitter:title" content="Gym Point - Transform Your Body, Elevate Your Life" />
     <meta name="twitter:description" content="Premium fitness training with expert coaches and world-class facilities." />
-    <meta name="twitter:image" content="https://gympointv2.vercel.app/hero-opengraph.png" />
+  <meta name="twitter:image" content="https://gympointv2.vercel.app/hero-opengraph.png.png?v=20251026" />
     <meta name="twitter:image:alt" content="Gym Point hero image" />
 
     <!-- Favicon (optional) -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="https://gympointv2.vercel.app/favicon.ico?v=20251026" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
