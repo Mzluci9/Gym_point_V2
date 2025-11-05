@@ -20,14 +20,11 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Gym Point?</h2>
           <p className="text-xl text-muted-foreground leading-relaxed mb-8">
             {/* PLACEHOLDER: Edit mission statement */}
-            Founded in 2015, Gym Point has been the premier fitness destination for thousands of members 
-            seeking transformation. We combine world-class facilities, expert coaching, and a supportive 
-            community to help you achieve results that last.
+           Founded in 2016, Gym Point has become a leading fitness hub for thousands of members committed to personal transformation. We offer top-tier facilities, professional coaching, and a motivating community designed to help you achieve lasting results.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
             {/* PLACEHOLDER: Edit value proposition */}
-            Whether you're a beginner taking your first step or an athlete pushing new limits, our team 
-            provides the guidance, accountability, and motivation you need. Your goals become our mission.
+            Whether you’re starting your fitness journey or striving to reach new performance levels, our team delivers the guidance, accountability, and motivation you need. Your goals are our mission.
           </p>
         </div>
 

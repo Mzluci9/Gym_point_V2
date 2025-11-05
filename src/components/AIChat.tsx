@@ -20,7 +20,7 @@ const AIChat = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hi! I'm your Gym Point AI assistant. Ask me about memberships, classes, trainers, or booking!",
+      content: "Hi! I'm your Gym Point AI assistant. Ask me about memberships, classes, trainers or booking!",
     },
   ]);
   const [input, setInput] = useState("");

@@ -16,7 +16,7 @@ const Pricing = () => {
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Flexible Pricing</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Choose the plan that fits your goals and commitment level
+            Choose the plan that fits your goals and commitmentment level
           </p>
         </div>
 
