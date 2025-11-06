@@ -21,7 +21,7 @@ const Programs = () => {
     },
     {
       icon: Users,
-      title: "Group Classes",
+      title: "Group Classes(Erobix)",
       description: "Join energizing group sessions including yoga, spin, CrossFit-style workouts, and more.",
     },
     {
